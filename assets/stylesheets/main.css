@@ -1,0 +1,517 @@
+/* 
+  ========================================
+  Browser reset
+  http://meyerweb.com/eric/tools/css/reset/ 
+	  v2.0 | 20110126
+	  License: none (public domain)
+  ========================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+body {
+	min-height: 100vh;
+	background: #fff;
+	color: #292f33;
+	font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-family: courier-std, monospace;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 180%;
+}
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.content-wrapper {
+	background-color: rgba(255, 255, 255, 0);
+	padding: 10px 1.5% 10px 3%;
+	margin: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (min-width: 750px){
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		min-height: 40vh;
+		align-items: center;
+	}
+}
+/* 
+  ========================================
+  Navigation bar
+  ========================================
+*/
+.web-logo {
+	display: none;
+}
+.header-right-web {
+	display: none;
+}
+.navbar {
+	display: flex; 
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(53, 53, 53);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header-left {
+	margin-left: 1%;
+	font-family: 'Allerta Stencil', sans-serif;
+}
+.header-right {
+	margin-right: 1%;
+}
+/* ====== Logo  ====== */
+.logo {
+	color: #fff;		
+	font-size: 2em;
+	text-decoration: none;
+	padding: 0 9px;
+}
+.logo:hover {
+	color:  #fb8c00;
+}
+/* ====== Dropdown menu  ====== */
+.menu-toggle {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  padding: 6px 9px;
+  transition: all .15s ease;
+}
+.menu-toggle:hover {
+  color: #fb8c00;
+}
+.top-nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-weight: 600;
+  text-align: left;
+  background-color: #fff;
+  transition: all .35s ease;
+}
+.active {
+	display: block;
+	height: 100vh;
+}
+.menu-item a {
+  color: #f46524;
+  font-size: 1.2em;
+  display: block;
+  padding: 3.5% 0 3.5% 10%;
+  text-decoration: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+.menu-item a:hover {
+  color: #ff7b29;
+  background-color: #f2f2f2;
+}
+/* 
+   ========================================
+   Large screen view navigation bar  
+   ========================================
+*/
+@media screen and (min-width: 750px) {
+	/* ====== left side ====== */
+	.logo {
+		display: none;
+	}
+	.web-logo {
+		display: block;
+		text-decoration: none;
+		padding: 6px;
+	}
+	.web-logo:hover {
+		background-color: #404040;
+		box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.name-text {
+		display: inline;
+		vertical-align: middle;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 1.2em;
+	}
+	.profile-picture-nav {	
+		vertical-align: middle;
+		width: 60px;
+		border: 1.3px solid #27c7bd;
+		border-radius: 50%;
+	}
+	/* ====== right side ====== */
+	.menu-toggle {
+		display: none;
+	}
+	.top-nav {
+  		display: inline-flex;
+  		position: static;
+  		font-weight: 500;
+  		text-align: center;
+  		background-color: inherit;
+  		transition: none;
+	}
+	.menu-item a {
+  		display: inline;
+		color: #fb8c00;
+  		white-space: nowrap;
+  		padding: 23px 15px;
+		margin: 7px;
+  		border-bottom: none;
+	}
+	.menu-item a:hover,
+	.menu-item a:active {
+  		background-color: #404040;
+  		box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border-bottom: 1px solid #fb8c00;
+	}
+}
+/* 
+  ========================================
+  Common styles
+  ========================================
+*/
+/* ====== typography ====== */
+h1 {
+	font-family: "Allerta Stencil";
+	color: #757575;
+	font-size: 2em;
+	line-height: 1.3;
+	margin-bottom: 30px;
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+h2 {
+	color: #fb8c00;
+	font-size: 1.3em;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+p {
+	font-family: 'Open Sans';
+}
+h3 {
+	font-family: "Allerta Stencil";
+	color: #fff;
+	font-size: 1em;
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+	margin: 20px 0 0 0;
+}
+.indent {
+	text-indent: 3em;
+}
+.close {
+	margin-bottom: 5px;
+}
+.far {
+	margin-bottom: 50px;
+}
+.light-orange {
+	color: #f46524;
+}
+.dark-orange {
+	color: #fb8c00;
+}
+.gray {
+	color: #757575;
+}
+.white {
+	color: #fff;
+}
+a {
+	color: #f46524;
+}
+@media screen and (min-width: 870px) {
+	.content-wrapper-web {
+		padding: 20px 5%;
+		margin: 0 15%;
+		background: rgba(255, 255, 255, 0);
+	}
+}
+/* 
+  ========================================
+  Home page main content
+  ========================================
+*/
+/* ====== Mobile view entry page ====== */
+.mobile-entry {
+	text-align: center;
+}
+.profile-picture {
+	width: 30%;
+	margin: 0 auto;
+	border: .1em solid #27c7bd;
+	border-radius: 50%;
+}
+.web-entry {
+	text-align: left;
+	margin: 0 3%;
+	padding: 10px 0 10px 2%;
+}
+.web-only {
+	display: none;
+}
+/* ====== Web view entry page ====== */
+@media screen and (min-width: 750px) {
+	.mobile-entry {
+		display: none;
+	}
+	.web-only {
+		display: block;
+	}
+}
+/* ====== Content/typography ====== */
+
+.bullet {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 10px;
+	border-radius: 50% 50% 0 50%;
+	background:         linear-gradient(to right bottom, #ff7b29, #fb8c00,#F7B42C
+);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.call-to-action-txt {
+	font-size: 1.2em;
+	font-weight: 600;
+	text-align: center;
+	padding: 30px 0;
+	margin: 0;
+	background-color: #ff7b29;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+.ori {
+	font-size: 2em;
+	text-align: left;
+}
+.cover {
+	width: 100%;
+	box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	padding: 30px 0;
+}
+.sunshine {
+	background-color: rgb(53, 53, 53);
+	background-image: url(../../images/sunshine.png);
+	background-position: center center;
+  	background-repeat: no-repeat;  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+  	
+}
+.pm {
+	background-color: rgb(53, 53, 53);
+	background-image: url(../../images/pm.jpg);
+	background-position: center center;
+  	background-repeat: no-repeat;  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+}
+.ba {
+	background-color: rgb(53, 53, 53);
+	background-image: url(../../images/ba.jpg);
+	background-position: center center;
+  	background-repeat: no-repeat;  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+}
+.dirty-hands {
+	background-color: rgb(53, 53, 53);
+	background-image: url(../../images/dirty-hands.jpg);
+	background-position: center center;
+  	background-repeat: no-repeat;  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+}
+.contact {
+	background-color: rgb(53, 53, 53);
+	background-image: url(../../images/contact.jpg);
+	background-position: center center;
+  	background-repeat: no-repeat;  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+}
+.dark-txt {
+	background-color: rgba(53, 53, 53, .86);
+	border-radius: 20px;
+	vertical-align: middle;
+}
+.presentation-txt {
+	color: #fff;
+}
+.dark-txt a {
+	color: #fff;
+}
+.dark-txt a:hover {
+	color: #fb8c00;
+}
+/* 
+  ========================================
+  Services page main content
+  ========================================
+*/
+
+/* 
+  ========================================
+  About me page main content
+  ========================================
+*/
+/* ====== CSS carousel ====== */
+.resume {
+	width: 100%;
+}
+.form-wrapper {
+	text-align: center;
+}
+/* 
+  ========================================
+  Contact page main content
+  ========================================
+*/
+
+
+
+/* 
+  ========================================
+  Footer
+  ========================================
+*/
+footer {
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(53, 53, 53);
+	text-align: center;
+	box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer a {
+	text-decoration: none;
+	color: inherit;
+}
+.call-to-action {
+	color: #fff;
+	font-family: 'Allerta Stencil';
+	padding: 20px 3%;
+	text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+.call-to-action-link {
+	font-family: 'Open Sans';
+	color: #27c7bd;
+	font-weight: 300;
+	font-size: 1.2em;
+	padding: 0 1.5%;
+	border-radius: 10px;
+	border-bottom: 1px solid #27c7bd;
+	box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.call-to-action-link:hover {
+	color: #fff;
+	background-color: #27c7bd;
+}
+/* ====== Mobile view bottom navigation grid ====== */
+.bottom-nav {
+  	display: flex;
+  	margin-top: 40px;
+}
+.column {
+  	flex: 50%;
+}
+.row {
+	margin-bottom: 12px;
+}
+.bottom-nav a {
+	color: #fff;
+	font-size: 1em;
+	white-space: nowrap;
+	padding: 0 10px;
+	border-radius: 6px;
+	border-bottom: none;
+}
+.bottom-nav a:hover {
+	background-color: #404040;
+	border-bottom: 1px solid #fb8c00;
+	box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* ====== Web view bottom navigation grid ====== */
+@media screen and (min-width: 550px) {
+	.column {
+		display: inline-flex;
+	}
+	.row {
+		flex: 25%;
+	}
+}
+
+.developer-signature {
+	color: #888;
+	margin-top: 40px;
+	padding-bottom: 20px;
+	font-size: .8em;
+	font-weight: 300;
+}

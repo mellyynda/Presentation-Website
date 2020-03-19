@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JM IT Consulting</title>
+		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+	</head>
+	<body>
+		<!-- 
+			==============
+			Navigation bar
+			==============
+		-->
+		<header class="navbar">
+			<div class="header-left">
+				<a href="index.html" class="web-logo"><img class="profile-picture-nav" src="images/profile.jpg" alt="my profile"><div class="name-text">John Meyers</div></a><a href="index.html" class="logo">JM</a>
+			</div>
+
+			<div class="header-right">
+				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
+				<!-- JS menu button icon change on click -->
+				<script>
+					var navBarToggle = document.getElementById('js-navbar-toggle');
+					var clickCount = 0;
+
+					navBarToggle.addEventListener('click', function () {
+	    				clickCount++;
+	    				if (clickCount%2==0){
+	    					navBarToggle.innerHTML ='&#9776;';
+	    				}else{
+	    					navBarToggle.innerHTML ='&#10006;';
+	    				}
+					});
+				</script>
+				<!-- Navbar menu items -->
+				<nav >
+					<ul class="top-nav" id="js-menu">
+						<li class="menu-item"><a href="index.html">Home</a></li>
+						<li class="menu-item"><a href="services.html">Services</a></li>
+						<li class="menu-item"><a href="about-me.html">About me</a></li>
+						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- JS mobile menu button toggle -->
+				<script>
+					var mainNav = document.getElementById('js-menu');
+					var navBarToggle = document.getElementById('js-navbar-toggle');
+
+					navBarToggle.addEventListener('click', function () {
+					    
+					    mainNav.classList.toggle('active');
+						}
+					);
+				</script>
+			</div>
+		</header>
+		<main>
+			<!-- 
+				===============================
+				Main content Project Management
+				===============================
+			 -->
+			<div class="content-wrapper content-wrapper-web">
+				<h1 id="project-management">Project Management consulting</h1>
+			</div>
+			<div class="cover pm">
+				<div class="content-wrapper content-wrapper-web dark-txt">
+					<h2>Agile Project Management, Prince2, PMI or SCRUM&#63;</h2>
+					<p class="presentation-txt">Adapting to any Project Management methodology from standard ones like Prince2, PMI or SCRUM to Agile Project Management techniques, but still keeping in mind that adapting to the customer’s needs and characteristics and using a pragmatic approach is the best way to gain the desired results.</p>
+				</div>
+			</div>
+			<div class="content-wrapper content-wrapper-web">
+				<h2>Support and guidance along the project’s evolution for Project Management Services like:</h2>
+				<p><span class="bullet"></span>Managing the Software Development Life-Cycle (SLDC);</p>
+				<p><span class="bullet"></span>Project organization and Business Case definition;</p>
+				<p><span class="bullet"></span>Quality management activities that cover creation, customization, control of project deliverables and <abbr title="Key Performance Indicators">KPI</abbr> definition;</p>
+				<p><span class="bullet"></span>Stakeholder management - facilitate communication between the project team (Development, Infrastructure, <abbr title="Quality assurance">QA</abbr>) and internal clients or external contractors in order to set the same expectations and have the same understanding over the project status;</p>
+				<p><span class="bullet"></span>Change management - Guiding projects along significant changes without losing touch of costs, scope, available resources and scheduling;</p>
+				<p><span class="bullet"></span>Accurately plan and define Project Scope Management;</p>
+				<p><span class="bullet"></span>Risk Management - Evaluation, modeling and understanding of risks associated with the project in order to design and deliver risk management solutions;</p>
+				<p><span class="bullet"></span>Managing Project Closure - Prepare User Acceptance Testing phase and gain sign-off on delivered solutions;</p>
+				<p><span class="bullet"></span>Coaching team members (business analysts, developers, testers).</p>
+			</div>
+			<!-- 
+				==============================
+				Main content Business Analysis
+				==============================
+			 -->
+			<div class="content-wrapper content-wrapper-web">
+				<h1 id="business-analysis">Business Analysis consulting</h1>
+			</div>
+				<div class="cover ba">
+					<div class="content-wrapper content-wrapper-web dark-txt">
+						<h2>Waterfall or Agile&#63;</h2>
+						<p class="presentation-txt">Tailoring the project implementation with the best suited methodology for your project taking into account the constraints in order to adapt to your business needs.</p>
+						<p class="presentation-txt">The latest years have been marked by the rise of many new software approaches. Agile and iterative methodologies have the tendency to lead to flattened structures focused on teamwork where business representatives are closer to developers. This type of approaches do not always facilitate a clear picture of the analyst role, who has to adapt in order to find his place in the structure and follow the organization’s trends. The experience in Agile work environments allows me to adequately advise customers and stakeholders throughout the project’s needs and even offer supporting training and coaching activities.</p>
+						<p class="presentation-txt">Aiming to form close working relationships with clients in order to provide a tailored service that will help you achieve your goals.</p>
+						<p class="presentation-txt">If you are looking for Business Analysis assistance, get in touch today using the dedicated contact page and we can discuss your business requirements.</p>
+					</div>
+				</div>
+			<div class="content-wrapper content-wrapper-web">
+				<h2>Support and guidance along the project’s evolution for Business Analysis Services like:</h2>
+				<p class="close"><span class="bullet"></span>Managing the Business Requirements Analysis process:</p>
+				<ul>
+					<li class="indent"><p>Define and baseline the project scope; </p></li>
+					<li class="indent"><p>Identify and trace the business requirements from elicitation to delivery.;</p></li>
+				</ul>
+				<p class="close"><span class="bullet"></span>Designing the IT business solution architecture:</p>
+				<ul>
+					<li class="indent"><p>Use Cases Modelling</p></li>
+					<li class="indent"><p>Business and Logical Data Modelling;</p></li>
+					<li class="indent"><p>Database Modelling — conceptual, logical and physical;</p></li>
+					<li class="indent"><p>Business process modelling;</p></li>
+					<li class="indent"><p>Design User Interface Mock-ups and Wire-frames using professional tools.;</p></li>
+				</ul>
+				<p><span class="bullet"></span>Prioritising project backlog and monitoring implementation;</p>
+				<p><span class="bullet"></span>Document Lessons Learned — Organising business handover sessions and training materials for the client;</p>
+				<p><span class="bullet"></span>On demand and need-based training and coaching activities;</p>
+			</div>
+		</main>
+		<!-- 
+			======
+			Footer
+			======
+		 -->
+		<footer>
+			<div class="content-wrapper-web">
+				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
+				<a href="contact.html" class="call-to-action-link">Get in touch</a>
+				<div class="is"><a href="index.html">JM</a></div>
+				<nav>
+					<div class="bottom-nav">
+						<div class="column">
+							<p class="row"><a href="index.html">Home</a></p>
+							<p class="row"><a href="services.html">Services</a></p>
+						</div>
+						<div class="column">
+							<p class="row"><a href="about-me.html">About me</a></p>
+							<p class="row"><a href="contact.html">Contact</a></p>
+						</div>
+					</div>
+				</nav>	
+				<p class="developer-signature">Website designed by &#64;mellyynda</p>
+			</div>
+		</footer>
+	</body>
+</html>
