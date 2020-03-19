@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JM IT Consulting</title>
+		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+	</head>
+	<body>
+		<!-- 
+			==============
+			Navigation bar
+			==============
+		-->
+		<header class="navbar">
+			<div class="header-left">
+				<a href="index.html" class="web-logo"><img class="profile-picture-nav" src="images/profile.jpg" alt="my profile"><div class="name-text">John Meyers</div></a><a href="index.html" class="logo">JM</a>
+			</div>
+			<div class="header-right">
+				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
+				<!-- 
+					====================================
+					JS menu button icon change on click
+					====================================
+				 -->
+				<script>
+					var navBarToggle = document.getElementById('js-navbar-toggle');
+					var clickCount = 0;
+
+					navBarToggle.addEventListener('click', function () {
+	    				clickCount++;
+	    				if (clickCount%2==0){
+	    					navBarToggle.innerHTML ='&#9776;';
+	    				}else{
+	    					navBarToggle.innerHTML ='&#10006;';
+	    				}
+					});
+				</script>
+				<!-- 
+					=================
+					Navbar menu items
+					=================
+				 -->
+				<nav >
+					<ul class="top-nav" id="js-menu">
+						<li class="menu-item"><a href="index.html">Home</a></li>
+						<li class="menu-item"><a href="services.html">Services</a></li>
+						<li class="menu-item"><a href="about-me.html">About me</a></li>
+						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- 
+					============================
+					JS mobile menu button toggle
+					============================
+				 -->
+				<script>
+					var mainNav = document.getElementById('js-menu');
+					var navBarToggle = document.getElementById('js-navbar-toggle');
+
+					navBarToggle.addEventListener('click', function () {
+					    
+					    mainNav.classList.toggle('active');
+						}
+					);
+				</script>
+			</div>
+		</header>
+		<!-- 
+			============================
+			Main content
+			============================
+		 -->
+		<main>
+			<!-- 
+				==========================
+				Main content Portfolio
+				==========================
+			 -->
+			<div class="cover dirty-hands">
+				<div class="content-wrapper content-wrapper-web dark-txt">
+					<h1 class="white">Portfolio</h1>
+					<p class="presentation-txt">Involved in the elaboration and implementation of medium and large multi-million euro projects for Integrated Software Solutions in different business industries, <span class="dark-orange">including projects with low performance expectations due to either the industry's complexity and high details degree or conflict situations between stakeholders, that were successfully managed and completed.</span></p>
+					<h3>Public Health: </h3>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="https://ecdc.europa.eu/en/early-warning-and-response-system-ewrs">EWRS</a> –Early Warning and Response System</p>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="https://ecdc.europa.eu/en/publications-data/epidemic-intelligence-information-system-epis">EPIS</a> – Epidemic Intelligence Information System</p>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="https://ecdc.europa.eu/en/publications-data/helicswinnet-hwn">HelicsWin.Net</a> – Desktop application used in hospitals around Europe to collect data and report to the EU cases of healthcare associated infections</p>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="https://ecdc.europa.eu">New ECDC Portal</a></p>
+					<h3>Governmental:</h3>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="https://www.danube-navigation.eu/projects/roris-traffic-vessel-management-and-information-system-on-the-danube-danubeblack-sea-canal-and-poarta-albamidia-navodari-canal">RORIS</a> – Romanian River Information System</p>
+					<p class="presentation-txt"><span class="bullet"></span>SIM – Romania Integrated Environmental Management System</p>
+					<h3>Defence:</h3>
+					<p class="presentation-txt"><span class="bullet"></span>LOGFS – NATO Logistics Functional Services Programme</p>
+					<h3>Recruitment:</h3>
+					<p class="presentation-txt"><span class="bullet"></span><a target="_blank" href="http://www.myjob.ro">MyJob</a> – one of the top 3 recruitment platforms in Romania</p>
+				</div>
+			</div>
+			<!-- 
+				==========================
+				Main content Resume
+				==========================
+			 -->
+			<div class="content-wrapper content-wrapper-web">
+				<h1 id="resume">Resume</h1>
+				<div class="form-wrapper">
+					<a target="_blank" href="https://www.canva.com/design/DADWQkHXdNg/view?utm_content=DADWQkHXdNg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img class="resume" src="images/resume/resume1.png" alt="resume first page">
+					<img class="resume" src="images/resume/resume2.png" alt="resume second page">
+					<img class="resume" src="images/resume/resume3.png" alt="resume third page"></a>
+				</div>
+			</div>
+			<!-- 
+				===========================
+				Main content Certifications
+				===========================
+			 -->
+			<div class="content-wrapper content-wrapper-web">
+				<h1 id="certifications">Certifications</h1>
+				<p><span class="call-to-action-txt">PMP®</span> – The Project Management Professional (PMP)® is the most important worldwide industry-recognized certification for project managers.</p>
+				<br>
+				<p><span class="call-to-action-txt">CBAP®</span> – The Certified Business Analysis Professional™ is the business analysis certification provided by IIBA. This is the world's most recognized certification for Business Analysts.</p>
+				<br>
+				<p><span class="call-to-action-txt">PRINCE2®</span> – PRINCE2 (PRojects IN Controlled Environments) is a process-based method for effective project management with emphasis on dividing projects into manageable and controllable stages.</p>
+				<br>
+				<p><span class="call-to-action-txt">PSPO™</span> – The Professional Scrum Product Owner™ is the most recognized certification validating knowledge of the Scrum framework and the ability to support value creation and delivery.</p>
+				<br>
+				<p><span class="call-to-action-txt">CSM®</span> –  Certified Scrum Master® specialized in Scrum Agile framework, a flexible and holistic product development approach for managing complex product development projects.</p>
+			</div>
+		</main>
+		<!-- 
+			============
+			Footer
+			============
+		 -->
+		<footer>
+			<div class="content-wrapper-web">
+				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
+				<a href="contact.html" class="call-to-action-link">Get in touch</a>
+				<div class="is"><a href="index.html">JM</a></div>
+				<nav>
+					<div class="bottom-nav">
+						<div class="column">
+							<p class="row"><a href="index.html">Home</a></p>
+							<p class="row"><a href="services.html">Services</a></p>
+						</div>
+						<div class="column">
+							<p class="row"><a href="about-me.html">About me</a></p>
+							<p class="row"><a href="contact.html">Contact</a></p>
+						</div>
+					</div>
+				</nav>	
+				<p class="developer-signature">Website designed by &#64;mellyynda</p>
+			</div>
+		</footer>
+	</body>
+</html>
