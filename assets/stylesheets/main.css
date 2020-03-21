@@ -151,7 +151,6 @@ body {
 }
 .active {
 	display: block;
-	height: 100vh;
 }
 .menu-item a {
   color: #f46524;
