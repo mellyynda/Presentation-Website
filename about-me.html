@@ -2,11 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>JM IT Consulting</title>
 		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/slick-theme.css"/>
+		<script src="js/main.js" ></script>
 	</head>
 	<body>
 		<!-- 
@@ -20,24 +24,7 @@
 			</div>
 			<div class="header-right">
 				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
-				<!-- 
-					====================================
-					JS menu button icon change on click
-					====================================
-				 -->
-				<script>
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-					var clickCount = 0;
 
-					navBarToggle.addEventListener('click', function () {
-	    				clickCount++;
-	    				if (clickCount%2==0){
-	    					navBarToggle.innerHTML ='&#9776;';
-	    				}else{
-	    					navBarToggle.innerHTML ='&#10006;';
-	    				}
-					});
-				</script>
 				<!-- 
 					=================
 					Navbar menu items
@@ -51,22 +38,12 @@
 						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
-				<!-- 
-					============================
-					JS mobile menu button toggle
-					============================
-				 -->
-				<script>
-					var mainNav = document.getElementById('js-menu');
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-
-					navBarToggle.addEventListener('click', function () {
-					    
-					    mainNav.classList.toggle('active');
-						}
-					);
-				</script>
 			</div>
+			<!-- JS icon click, scroll effects and mobile menu button toggle -->
+			<script>
+					menuButtonEffects ();					
+					openMobileNav ();
+			</script>
 		</header>
 		<!-- 
 			============================
@@ -105,9 +82,13 @@
 			<div class="content-wrapper content-wrapper-web">
 				<h1 id="resume">Resume</h1>
 				<div class="form-wrapper">
-					<a target="_blank" href="https://www.canva.com/design/DADWQkHXdNg/view?utm_content=DADWQkHXdNg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img class="resume" src="images/Resume/resume1.png" alt="resume first page">
-					<img class="resume" src="images/Resume/resume2.png" alt="resume second page">
-					<img class="resume" src="images/Resume/resume3.png" alt="resume third page"></a>
+					<a target="_blank" href="https://www.canva.com/design/DADWQkHXdNg/view?utm_content=DADWQkHXdNg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+						<div class="carrousel" id="resume-wrapper">
+							<div><img class="resume" src="images/resume/resume1.png" alt="resume first page"></div>
+							<div><img class="resume" src="images/resume/resume2.png" alt="resume second page"></div>
+							<div><img class="resume" src="images/resume/resume3.png" alt="resume third page"></div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<!-- 
@@ -117,15 +98,15 @@
 			 -->
 			<div class="content-wrapper content-wrapper-web">
 				<h1 id="certifications">Certifications</h1>
-				<p><span class="call-to-action-txt">PMP®</span> – The Project Management Professional (PMP)® is the most important worldwide industry-recognized certification for project managers.</p>
+				<p><span class="call-to-action-txt">PMP®</span> The Project Management Professional (PMP)® is the most important worldwide industry-recognized certification for project managers.</p>
 				<br>
-				<p><span class="call-to-action-txt">CBAP®</span> – The Certified Business Analysis Professional™ is the business analysis certification provided by IIBA. This is the world's most recognized certification for Business Analysts.</p>
+				<p><span class="call-to-action-txt">CBAP®</span> The Certified Business Analysis Professional™ is the business analysis certification provided by IIBA. This is the world's most recognized certification for Business Analysts.</p>
 				<br>
-				<p><span class="call-to-action-txt">PRINCE2®</span> – PRINCE2 (PRojects IN Controlled Environments) is a process-based method for effective project management with emphasis on dividing projects into manageable and controllable stages.</p>
+				<p><span class="call-to-action-txt">PRINCE2®</span> PRINCE2 (PRojects IN Controlled Environments) is a process-based method for effective project management with emphasis on dividing projects into manageable and controllable stages.</p>
 				<br>
-				<p><span class="call-to-action-txt">PSPO™</span> – The Professional Scrum Product Owner™ is the most recognized certification validating knowledge of the Scrum framework and the ability to support value creation and delivery.</p>
+				<p><span class="call-to-action-txt">PSPO™</span> The Professional Scrum Product Owner™ is the most recognized certification validating knowledge of the Scrum framework and the ability to support value creation and delivery.</p>
 				<br>
-				<p><span class="call-to-action-txt">CSM®</span> –  Certified Scrum Master® specialized in Scrum Agile framework, a flexible and holistic product development approach for managing complex product development projects.</p>
+				<p><span class="call-to-action-txt">CSM®</span> Certified Scrum Master® specialized in Scrum Agile framework, a flexible and holistic product development approach for managing complex product development projects.</p>
 			</div>
 		</main>
 		<!-- 
@@ -134,23 +115,18 @@
 			============
 		 -->
 		<footer>
-			<div class="content-wrapper-web">
-				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
-				<a href="contact.html" class="call-to-action-link">Get in touch</a>
-				<div class="is"><a href="index.html">JM</a></div>
+			<div class="footer">
 				<nav>
 					<div class="bottom-nav">
 						<div class="column">
 							<p class="row"><a href="index.html">Home</a></p>
 							<p class="row"><a href="services.html">Services</a></p>
-						</div>
-						<div class="column">
 							<p class="row"><a href="about-me.html">About me</a></p>
 							<p class="row"><a href="contact.html">Contact</a></p>
 						</div>
+						<p class="developer-signature">Website designed by &#64;mellyynda</p>
 					</div>
 				</nav>	
-				<p class="developer-signature">Website designed by &#64;mellyynda</p>
 			</div>
 		</footer>
 	</body>

@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<script src="js/main.js" ></script>
 	</head>
 	<body>
 		<!-- 
@@ -22,20 +23,7 @@
 
 			<div class="header-right">
 				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
-				<!-- JS menu button icon change on click -->
-				<script>
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-					var clickCount = 0;
 
-					navBarToggle.addEventListener('click', function () {
-	    				clickCount++;
-	    				if (clickCount%2==0){
-	    					navBarToggle.innerHTML ='&#9776;';
-	    				}else{
-	    					navBarToggle.innerHTML ='&#10006;';
-	    				}
-					});
-				</script>
 				<!-- Navbar menu items -->
 				<nav >
 					<ul class="top-nav" id="js-menu">
@@ -45,18 +33,12 @@
 						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
-				<!-- JS mobile menu button toggle -->
-				<script>
-					var mainNav = document.getElementById('js-menu');
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-
-					navBarToggle.addEventListener('click', function () {
-					    
-					    mainNav.classList.toggle('active');
-						}
-					);
-				</script>
 			</div>
+			<!-- JS icon click, scroll effects and mobile menu button toggle -->
+			<script>
+					menuButtonEffects ();					
+					openMobileNav ();
+			</script>			
 		</header>
 		<main>
 			<!-- 
@@ -88,7 +70,7 @@
 				Main content Business Analysis
 				==============================
 			 -->
-			<div class="cover ba">
+				<div class="cover ba">
 					<div class="content-wrapper content-wrapper-web dark-txt">
 						<h1 id="business-analysis" class="white">Business Analysis consulting</h1>
 						<h2>Waterfall or Agile&#63;</h2>
@@ -115,7 +97,7 @@
 				</ul>
 				<p><span class="bullet"></span>Prioritising project backlog and monitoring implementation;</p>
 				<p><span class="bullet"></span>Document Lessons Learned — Organising business handover sessions and training materials for the client;</p>
-				<p><span class="bullet"></span>On demand and need-based training and coaching activities;</p>
+				<p><span class="bullet"></span>On demand and need-based training and coaching activities.</p>
 			</div>
 		</main>
 		<!-- 
@@ -124,23 +106,18 @@
 			======
 		 -->
 		<footer>
-			<div class="content-wrapper-web">
-				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
-				<a href="contact.html" class="call-to-action-link">Get in touch</a>
-				<div class="is"><a href="index.html">JM</a></div>
+			<div class="footer">
 				<nav>
 					<div class="bottom-nav">
 						<div class="column">
 							<p class="row"><a href="index.html">Home</a></p>
 							<p class="row"><a href="services.html">Services</a></p>
-						</div>
-						<div class="column">
 							<p class="row"><a href="about-me.html">About me</a></p>
 							<p class="row"><a href="contact.html">Contact</a></p>
-						</div>
+						</div>						
+						<p class="developer-signature">Website designed by &#64;mellyynda</p>
 					</div>
 				</nav>	
-				<p class="developer-signature">Website designed by &#64;mellyynda</p>
 			</div>
 		</footer>
 	</body>

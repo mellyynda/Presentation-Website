@@ -2,11 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>JM IT Consulting</title>
 		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
-		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">		
+		<script src="js/main.js" ></script>
 	</head>
 	<body>
 		<!-- 
@@ -21,24 +23,6 @@
 			<div class="header-right">
 				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
 				<!-- 
-					====================================
-					JS menu button icon change on click
-					====================================
-				 -->
-				<script>
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-					var clickCount = 0;
-
-					navBarToggle.addEventListener('click', function () {
-	    				clickCount++;
-	    				if (clickCount%2==0){
-	    					navBarToggle.innerHTML ='&#9776;';
-	    				}else{
-	    					navBarToggle.innerHTML ='&#10006;';
-	    				}
-					});
-				</script>
-				<!-- 
 					=================
 					Navbar menu items
 					=================
@@ -51,22 +35,12 @@
 						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
-				<!-- 
-					============================
-					JS mobile menu button toggle
-					============================
-				 -->
-				<script>
-					var mainNav = document.getElementById('js-menu');
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-
-					navBarToggle.addEventListener('click', function () {
-					    
-					    mainNav.classList.toggle('active');
-						}
-					);
-				</script>
 			</div>
+			<!-- JS icon click, scroll effects and mobile menu button toggle -->
+			<script>
+					menuButtonEffects ();					
+					openMobileNav ();
+			</script>			
 		</header>
 		<!-- 
 			============================
@@ -75,7 +49,7 @@
 		 -->
 		<main>
 			<div class="cover contact">
-				<div class="content-wrapper dark-txt">
+				<div class="content-wrapper content-wrapper-web dark-txt">
 					<h1 class="white">Contact</h1>
 					<div class="flex">
 						<div class="far"><h2>LinkedIn:</h2> 	<h3>/john--meyers</h3></div>
@@ -91,22 +65,18 @@
 			============
 		 -->
 		<footer>
-			<div class="content-wrapper-web">
-				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
-				<a href="contact.html" class="call-to-action-link">Get in touch</a>
+			<div class="footer">
 				<nav>
 					<div class="bottom-nav">
 						<div class="column">
 							<p class="row"><a href="index.html">Home</a></p>
 							<p class="row"><a href="services.html">Services</a></p>
-						</div>
-						<div class="column">
 							<p class="row"><a href="about-me.html">About me</a></p>
 							<p class="row"><a href="contact.html">Contact</a></p>
 						</div>
+						<p class="developer-signature">Website designed by &#64;mellyynda</p>
 					</div>
 				</nav>	
-				<p class="developer-signature">Website designed by &#64;mellyynda</p>
 			</div>
 		</footer>
 	</body>
