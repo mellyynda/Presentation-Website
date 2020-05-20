@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/iyx0ywr.css">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<script src="js/main.js" ></script>
 	</head>
 	<body>
 		<!-- 
@@ -21,26 +22,8 @@
 			</div>
 			<div class="header-right">
 				<p id="js-navbar-toggle" class="menu-toggle" >&#9776;</p>
-				<!-- 
-					====================================
-					JS menu button icon change on click
-					====================================
-				 -->
-				<script>
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-					var clickCount = 0;
-
-					navBarToggle.addEventListener('click', function () {
-	    				clickCount++;
-	    				if (clickCount%2==0){
-	    					navBarToggle.innerHTML ='&#9776;';
-	    				}else{
-	    					navBarToggle.innerHTML ='&#10006;';
-	    				}
-					});
-				</script>
-				<!-- 
-					=================
+				
+				<!-- =================
 					Navbar menu items
 					=================
 				 -->
@@ -52,22 +35,12 @@
 						<li id="contact" class="menu-item"><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
-				<!-- 
-					============================
-					JS mobile menu button toggle
-					============================
-				 -->
-				<script>
-					var mainNav = document.getElementById('js-menu');
-					var navBarToggle = document.getElementById('js-navbar-toggle');
-
-					navBarToggle.addEventListener('click', function () {
-					    
-					    mainNav.classList.toggle('active');
-						}
-					);
-				</script>
 			</div>
+			<!-- JS icon click, scroll effects and mobile menu button toggle -->
+			<script>
+					menuButtonEffects ();					
+					openMobileNav ();
+			</script>			
 		</header>
 		<!-- 
 			============================
@@ -91,9 +64,6 @@
 				<p><span class="bullet"></span>Are you planning a digital transformation of your company to adapt to a challenging environment?</p>
 				<p><span class="bullet"></span>Do you want to increase your revenue by remodelling your business process model?</p>
 				<p><span class="bullet"></span>Would you like to automate and digitise your operations and implement the latest technologies?</p>
-				<br>
-				<h2 class="ori">or</h2>
-				<br>
 				<p><span class="bullet"></span>Are your software products being delivered late and with increased costs?</p>
 				<p><span class="bullet"></span>Do you think your software products will fail to meet the business requirements?</p>
 			</div>
@@ -104,16 +74,9 @@
 					<p class="presentation-txt">Offering strategic IT consulting services that will guide you throughout the entire Software Development Life Cycle by making sure that high quality standards are provided along the way and at the delivery of your final product.</p>
 				</div>
 			</div>
-			<div class="content-wrapper content-wrapper-web">
-				<br>
-				<br>
-				<br>
-				<br>
+			<div class="content-wrapper content-wrapper-web center-text">
 				<p class="call-to-action-txt">Talk to a specialist! IT consulting services can help you identify the gaps and tailor customized solutions for meeting both the client’s and the provider’s needs!</p>
-				<br>
-				<br>
-				<br>
-				<br>
+                <a href="contact.html" class="call-to-action-link">Get in touch</a>
 			</div>
 		</main>
 		<!-- 
@@ -122,22 +85,18 @@
 			============
 		 -->
 		<footer>
-			<div class="content-wrapper-web">
-				<p class="call-to-action">Take your IT Organization to the next level of efficienty and strategic value&#33;</p>
-				<a href="contact.html" class="call-to-action-link">Get in touch</a>
+			<div class="footer">
 					<nav>
 						<div class="bottom-nav">
 							<div class="column">
 								<p class="row"><a href="index.html">Home</a></p>
 								<p class="row"><a href="services.html">Services</a></p>
-							</div>
-							<div class="column">
 								<p class="row"><a href="about-me.html">About me</a></p>
 								<p class="row"><a href="contact.html">Contact</a></p>
 							</div>
+							<p class="developer-signature">Website designed by &#64;mellyynda</p>
 						</div>
 					</nav>	
-				<p class="developer-signature">Website designed by &#64;mellyynda</p>
 			</div>
 		</footer>
 	</body>
